@@ -38,3 +38,17 @@ Depois:
     //     salario: 10
     // }
     // db.people.insertOne(pessoa) // inserir um dado através de variável
+
+    // const arrpeople = [
+    //     {
+    //         name: "Cesar",
+    //         lastname: "Stati",
+    //         salary: 999999
+    //     },
+    //     {
+    //         name: "Nicolas",
+    //         lastname: "Marques",
+    //         salary: 1234
+    //     },
+    // ]
+    // db.people.insertMany(arrpeople) // inserir mais de um dado através de variável
