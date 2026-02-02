@@ -1,0 +1,12 @@
+Introdução ao MongoDB
+
+- Adicionar a extensão "MongoDB for VS Code" e conectar com o MongoDB
+    Para conectar:
+    - No MongoDB procure por "Copy connection string".
+    - No ícone de folha do VS Code, procure por "Add Conection", 
+    na parte superior da página cole a string.
+    - Pronto, está conectado.
+
+Depois:
+- Create New Playground
+    
