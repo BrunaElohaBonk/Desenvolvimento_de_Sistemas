@@ -31,3 +31,10 @@ Depois:
     //         salary: 1234
     //     },
     // ])
+
+    // let pessoa = {
+    //     name: "Bruna",
+    //     sobrenome: "Bonk",
+    //     salario: 10
+    // }
+    // db.people.insertOne(pessoa) // inserir um dado através de variável
