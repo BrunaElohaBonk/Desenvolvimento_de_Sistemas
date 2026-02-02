@@ -9,4 +9,25 @@ Introdução ao MongoDB
 
 Depois:
 - Create New Playground
-    
+    - No arquivo .js:
+    // show databases
+    use('bosch') // usa esse banco de dados
+
+    // db.people.insertOne({ // para inserir apenas 1 dado
+    //     name: "Marcela",
+    //     lastname: "Robert",
+    //     salary: 1
+    // })
+
+    // db.people.insertMany([ // para inserir mais de 1 dado
+    //     {
+    //         name: "Queila",
+    //         lastname: "Lima",
+    //         salary: 1234
+    //     },
+    //     {
+    //         name: "Donathan",
+    //         lastname: "Goncalves",
+    //         salary: 1234
+    //     },
+    // ])
