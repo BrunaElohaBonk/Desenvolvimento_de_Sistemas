@@ -39,3 +39,7 @@ use('bosch') // usa esse banco de dados
 //     { salary: 1234},
 //     { $set:{ salary: 12345}}
 // )
+
+// db.people.deleteOne({ // deleta 1 registro
+//     _id: ObjectId('6981f330bd8359d20637d610')
+// })
