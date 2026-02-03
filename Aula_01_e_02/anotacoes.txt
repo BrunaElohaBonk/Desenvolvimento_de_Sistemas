@@ -11,44 +11,67 @@ Depois:
 - Create New Playground
     - No arquivo .js:
     // show databases
-    use('bosch') // usa esse banco de dados
+use('bosch') // usa esse banco de dados
 
-    // db.people.insertOne({ // para inserir apenas 1 dado
-    //     name: "Marcela",
-    //     lastname: "Robert",
-    //     salary: 1
-    // })
+// db.people.insertOne({ // para inserir apenas 1 dado
+//     name: "Marcela",
+//     lastname: "Robert",
+//     salary: 1
+// })
 
-    // db.people.insertMany([ // para inserir mais de 1 dado
-    //     {
-    //         name: "Queila",
-    //         lastname: "Lima",
-    //         salary: 1234
-    //     },
-    //     {
-    //         name: "Donathan",
-    //         lastname: "Goncalves",
-    //         salary: 1234
-    //     },
-    // ])
+// db.people.insertMany([ // para inserir mais de 1 dado
+//     {
+//         name: "Queila",
+//         lastname: "Lima",
+//         salary: 1234
+//     },
+//     {
+//         name: "Donathan",
+//         lastname: "Goncalves",
+//         salary: 1234
+//     },
+// ])
 
-    // let pessoa = {
-    //     name: "Bruna",
-    //     sobrenome: "Bonk",
-    //     salario: 10
-    // }
-    // db.people.insertOne(pessoa) // inserir um dado através de variável
+// let pessoa = {
+//     name: "Bruna",
+//     sobrenome: "Bonk",
+//     salario: 10
+// }
+// db.people.insertOne(pessoa) // inserir um dado através de variável
 
-    // const arrpeople = [
-    //     {
-    //         name: "Cesar",
-    //         lastname: "Stati",
-    //         salary: 999999
-    //     },
-    //     {
-    //         name: "Nicolas",
-    //         lastname: "Marques",
-    //         salary: 1234
-    //     },
-    // ]
-    // db.people.insertMany(arrpeople) // inserir mais de um dado através de variável
+// const arrpeople = [
+//     {
+//         name: "Cesar",
+//         lastname: "Stati",
+//         salary: 999999
+//     },
+//     {
+//         name: "Nicolas",
+//         lastname: "Marques",
+//         salary: 1234
+//     },
+// ]
+// db.people.insertMany(arrpeople) // inserir mais de um dado através de variável
+
+// db.people.insertMany([ // para inserir mais de 1 dado
+//     {
+//         name: "Ketlyn",
+//         lastname: "Jomes",
+//         salary: 1234
+//     },
+//     {
+//         name: "Lays",
+//         lastname: "Arceles",
+//         salary: 1234
+//     },
+//     {
+//         name: "Heloise",
+//         lastname: "Zeh",
+//         salary: 1234
+//     },
+//     {
+//         name: "Maria",
+//         lastname: "Silva",
+//         salary: 1234
+//     },
+// ])
