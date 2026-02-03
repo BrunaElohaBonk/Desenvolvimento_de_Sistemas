@@ -27,3 +27,5 @@ use('bosch') // usa esse banco de dados
 // $lte - menor ou igual a 
 // $ne - valores diferentes do especificado
 // $nin - nenhum dos valores especificados em uma matriz
+
+// db.people.find({ salary: { $gte: 1235}}, { name: 1, lastname: 1}) // mostra o nome e sobrenome de pessoas com salário maior ou igual
