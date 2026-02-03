@@ -29,3 +29,8 @@ use('bosch') // usa esse banco de dados
 // $nin - nenhum dos valores especificados em uma matriz
 
 // db.people.find({ salary: { $gte: 1235}}, { name: 1, lastname: 1}) // mostra o nome e sobrenome de pessoas com salário maior ou igual
+
+// db.people.updateOne( // atualizar apenas 1 dado
+//     { _id: ObjectId('6981f330bd8359d20637d607')},
+//     { $set:{ name: "Anna"}}
+// )
