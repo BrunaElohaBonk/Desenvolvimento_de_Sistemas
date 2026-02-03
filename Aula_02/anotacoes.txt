@@ -34,3 +34,8 @@ use('bosch') // usa esse banco de dados
 //     { _id: ObjectId('6981f330bd8359d20637d607')},
 //     { $set:{ name: "Anna"}}
 // )
+
+// db.people.updateMany( // modifica varios
+//     { salary: 1234},
+//     { $set:{ salary: 12345}}
+// )
