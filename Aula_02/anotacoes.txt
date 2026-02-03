@@ -1,0 +1,6 @@
+Comandos de seleção
+
+// show databases
+use('bosch') // usa esse banco de dados
+
+db.people.find() // busca todos os dados da coleção
