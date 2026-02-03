@@ -14,3 +14,5 @@ use('bosch') // usa esse banco de dados
 // db.people.find({ name: /a$/}) // termina com "a"
 
 // db.people.find({ name: /^B.*a$/ }) // começa com "B" e termina com "a"
+
+// db.people.find({ $and: [{ name: "Bruna"}, { sobrenome: "Bonk"}] }) // procura termos com mais de uma condição
