@@ -3,8 +3,8 @@ Comandos de seleção
 // show databases
 use('bosch') // usa esse banco de dados
 
-// db.people.find() // busca todos os dados da coleção
+// db.people.find() // busca todos os dados da coleção.
 
-// db.people.find({ name: "João"}) // busca dados específicos (filtro)
+// db.people.find({ name: "João"}) // busca dados específicos (filtro).
 
-// db.people.find({ name: /n/}) // procura apenas pela letra "n" (rejex)
+// db.people.find({ name: /n/}) // procura apenas pela letra "n" (rejex). Semelhante ao like no Sql.
