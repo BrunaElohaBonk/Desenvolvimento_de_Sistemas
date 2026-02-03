@@ -4,3 +4,5 @@ Comandos de seleção
 use('bosch') // usa esse banco de dados
 
 db.people.find() // busca todos os dados da coleção
+
+db.people.find({ name: "João"}) // busca dados específicos (filtro)
