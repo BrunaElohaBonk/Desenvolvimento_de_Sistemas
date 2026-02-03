@@ -12,3 +12,5 @@ use('bosch') // usa esse banco de dados
 // db.people.find({ name: /^B/}) // começa com "B"
 
 // db.people.find({ name: /a$/}) // termina com "a"
+
+// db.people.find({ name: /^B.*a$/ }) // começa com "B" e termina com "a"
