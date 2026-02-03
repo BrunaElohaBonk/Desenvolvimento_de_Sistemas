@@ -18,3 +18,12 @@ use('bosch') // usa esse banco de dados
 // db.people.find({ $and: [{ name: "Bruna"}, { sobrenome: "Bonk"}] }) // procura termos com mais de uma condição
 
 // db.people.find({ salary: { $gt: 1234}}) // maior que
+
+// db.people.find({ salary: { $gt: 1234}}) // maior que
+// $eq - igual a
+// $gte - maior ou igual a 
+// $in - corresponde a qualquer um dos valores especificados em uma matriz
+// $lt - menor que
+// $lte - menor ou igual a 
+// $ne - valores diferentes do especificado
+// $nin - nenhum dos valores especificados em uma matriz
