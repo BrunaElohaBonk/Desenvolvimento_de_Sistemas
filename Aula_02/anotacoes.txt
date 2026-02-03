@@ -8,3 +8,7 @@ use('bosch') // usa esse banco de dados
 // db.people.find({ name: "João"}) // busca dados específicos (filtro).
 
 // db.people.find({ name: /n/}) // procura apenas pela letra "n" (rejex). Semelhante ao like no Sql.
+
+// db.people.find({ name: /^B/}) // começa com "B"
+
+// db.people.find({ name: /a$/}) // termina com "a"
