@@ -10,3 +10,4 @@ No terminal, entre na pasta e inclua o seguinte comando para configurar nosso pr
     npm i typescript @types/node tsx -D
 Agora podemos rodar o seguinte comando, para criar o arquivo de configuração do typescript para gerenciá-lo.:
     npx tsc --init
+Substitua o código do tsconfig.json
