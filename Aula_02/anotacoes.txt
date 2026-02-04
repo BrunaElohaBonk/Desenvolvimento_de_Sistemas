@@ -43,15 +43,3 @@ use('bosch') // usa esse banco de dados
 // db.people.deleteOne({ // deleta 1 registro
 //     _id: ObjectId('6981f330bd8359d20637d610')
 // })
-
-// Busca 1: Encontrar todos os contatos cujo nome começa com a letra "A" (ignorando maiúsculas/minúsculas).
-// db.people.find({ nome: /^a/i})
-
-// Busca 2: Encontrar todos os contatos cujo telefone começa com "9".
-// db.people.find({ telefone: /^9/})
-
-// Busca 3: Encontrar todos os contatos cujo e-mail contém "gmail.com".
-// db.people.find({ email: /gmail.com/})
-
-// Busca 4: Encontrar todos os contatos que moram na cidade "São Paulo".
-// db.people.find({ cidade: /São Paulo/})
