@@ -58,3 +58,9 @@ use('atividade')
 //     { _id: ObjectId('698327892edca8d2300d236c')},
 //     { $set:{email: "anaSilva@gmail.com", telefone: "999954321"}}
 // )
+
+// Atualização 2: Atualizar a cidade de um contato com base no nome ou e-mail.
+// db.people.updateOne(
+//     { nome: "Bruno Costa"},
+//     { $set: {cidade: "Araucária"}}
+// )
