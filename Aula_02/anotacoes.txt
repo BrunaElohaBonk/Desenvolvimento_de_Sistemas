@@ -45,3 +45,8 @@ use('bosch') // usa esse banco de dados
 // })
 
 // db.people.find({ dataCadastro: { $gte: new Date("2023-01-01T00:00:00Z") }}) // buscar datas
+
+// db.people.updateOne( // atualiza mais de um atributo ao mesmo tempo
+//     { _id: ObjectId('698327892edca8d2300d236c')},
+//     { $set:{email: "anaSilva@gmail.com", telefone: "999954321"}}
+// )

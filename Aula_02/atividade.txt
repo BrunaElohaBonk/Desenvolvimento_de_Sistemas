@@ -52,3 +52,9 @@ use('atividade')
 
 // Busca 5: Encontrar todos os contatos que foram cadastrados após 01 de janeiro de 2023.
 // db.people.find({ dataCadastro: { $gte: new Date("2023-01-01T00:00:00Z") }})
+
+// Atualização 1: Atualizar o e-mail e telefone de um contato específico (por nome ou telefone).
+// db.people.updateOne( 
+//     { _id: ObjectId('698327892edca8d2300d236c')},
+//     { $set:{email: "anaSilva@gmail.com", telefone: "999954321"}}
+// )
