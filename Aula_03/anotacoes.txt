@@ -8,4 +8,5 @@ Incluir no package.json para facilitar o desenvolvimento da API:
     "type": "module"
 No terminal, entre na pasta e inclua o seguinte comando para configurar nosso projeto para aceitar o uso de TS.:
     npm i typescript @types/node tsx -D
-
+Agora podemos rodar o seguinte comando, para criar o arquivo de configuração do typescript para gerenciá-lo.:
+    npx tsc --init
