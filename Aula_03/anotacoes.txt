@@ -1,0 +1,6 @@
+Modelagem de dados não estruturados
+
+Introduzindo API's
+Para iniciar um projeto, utilizmaos o comando:
+    npm init // cria o arquivo package.json que gerencia os pacotese dependências
+    npm init -y //pula as etapas de input do init.
