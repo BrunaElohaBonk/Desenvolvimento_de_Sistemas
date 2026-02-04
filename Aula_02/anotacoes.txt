@@ -43,3 +43,5 @@ use('bosch') // usa esse banco de dados
 // db.people.deleteOne({ // deleta 1 registro
 //     _id: ObjectId('6981f330bd8359d20637d610')
 // })
+
+// db.people.find({ dataCadastro: { $gte: new Date("2023-01-01T00:00:00Z") }}) // buscar datas

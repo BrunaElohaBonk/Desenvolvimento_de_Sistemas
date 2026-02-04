@@ -49,3 +49,6 @@ use('atividade')
 
 // Busca 4: Encontrar todos os contatos que moram na cidade "São Paulo".
 // db.people.find({ cidade: /São Paulo/})
+
+// Busca 5: Encontrar todos os contatos que foram cadastrados após 01 de janeiro de 2023.
+// db.people.find({ dataCadastro: { $gte: new Date("2023-01-01T00:00:00Z") }})
