@@ -75,3 +75,8 @@ use('atividade')
 // db.people.deleteOne({ 
 //     telefone: "999954321"
 // })
+
+// Deletar 2: Deletar todos os contatos da cidade "Curitiba".
+// db.people.deleteMany({
+//     cidade: "Curitiba"
+// })
