@@ -49,3 +49,6 @@ use('bosch') // usa esse banco de dados
 
 // Busca 2: Encontrar todos os contatos cujo telefone começa com "9".
 // db.people.find({ telefone: /^9/})
+
+// Busca 3: Encontrar todos os contatos cujo e-mail contém "gmail.com".
+// db.people.find({ email: /gmail.com/})
