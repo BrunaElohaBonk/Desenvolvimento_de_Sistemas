@@ -52,3 +52,6 @@ use('bosch') // usa esse banco de dados
 
 // Busca 3: Encontrar todos os contatos cujo e-mail contém "gmail.com".
 // db.people.find({ email: /gmail.com/})
+
+// Busca 4: Encontrar todos os contatos que moram na cidade "São Paulo".
+// db.people.find({ cidade: /São Paulo/})
