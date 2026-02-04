@@ -70,3 +70,8 @@ use('atividade')
 //     { telefone: /41/},
 //     { $set: { cidade: "Curitiba" }}
 // )
+
+// Deletar 1: Deletar um contato com base no e-mail ou telefone.
+// db.people.deleteOne({ 
+//     telefone: "999954321"
+// })
