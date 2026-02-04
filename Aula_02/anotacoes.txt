@@ -46,3 +46,6 @@ use('bosch') // usa esse banco de dados
 
 // Busca 1: Encontrar todos os contatos cujo nome começa com a letra "A" (ignorando maiúsculas/minúsculas).
 // db.people.find({ nome: /^a/i})
+
+// Busca 2: Encontrar todos os contatos cujo telefone começa com "9".
+// db.people.find({ telefone: /^9/})
