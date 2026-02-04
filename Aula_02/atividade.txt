@@ -64,3 +64,9 @@ use('atividade')
 //     { nome: "Bruno Costa"},
 //     { $set: {cidade: "Araucária"}}
 // )
+
+// Atualização 3: Atualizar todos os números que possuem 41 com a cidade “Curitiba”
+// db.people.updateMany(
+//     { telefone: /41/},
+//     { $set: { cidade: "Curitiba" }}
+// )
