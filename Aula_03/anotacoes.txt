@@ -16,3 +16,7 @@ Colocar no package.json:
     "dev": "npx tsx watch src/server.ts"
 No terminal coloque:
     npm i express @types/express
+
+
+CONFIGURANDO ROTAS
+Crie a pasta routes
