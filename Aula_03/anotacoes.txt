@@ -12,3 +12,7 @@ No terminal, entre na pasta e inclua o seguinte comando para configurar nosso pr
 Agora podemos rodar o seguinte comando, para criar o arquivo de configuração do typescript para gerenciá-lo.:
     npx tsc --init
 Substitua o código do tsconfig.json pelo código da versão do node correta
+Colocar no package.json:
+    "dev": "npx tsx watch src/server.ts"
+No terminal coloque:
+    npm i express @types/express
