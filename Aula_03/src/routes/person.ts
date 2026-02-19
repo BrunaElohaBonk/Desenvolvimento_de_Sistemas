@@ -23,7 +23,12 @@ router
         const {name, lastname} = req.query
         res.status(200).send({ response: name, lastname})
     })
-    
+
+    .put('/atualizar/:id', (req: Request, res: Response) => {
+        const { id } = req.params
+        const { name, lastname } = req.body
+        res.status(200).send({ response: `Atualizando o usuário ${id} -> ${name} ${lastname}`})
+    })
 //....
 
 export default router;
