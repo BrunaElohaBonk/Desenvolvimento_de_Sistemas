@@ -4,31 +4,54 @@ const router: Router = express.Router();
 const people: object[] = [];
 
 router
-    .post('/registrar', (req: Request, res: Response) => {
-        const{ name, lastname } = req.body
-        people.push({name, lastname})
+    // .post('/registrar', (req: Request, res: Response) => {
+    //     const{ name, lastname } = req.body
+    //     people.push({name, lastname})
+    //     res.status(200).send({message: `Usuário ${name} ${lastname} cadastrado com sucesso!`})
+    // })
+    // .get('/usuarios', (req: Request, res: Response) => {
+    //     res.status(200).send({ users: people })
+    // })
+
+    // .get('/usuarios/:id', (req: Request, res: Response) => {
+    //     const { id } = req.params
+    //     let convertedId = Number(id)
+    //     res.status(200).send({ response: people[convertedId] })
+    // })
+
+    // .get('/filtro', (req: Request, res: Response) => {
+    //     const {name, lastname} = req.query
+    //     res.status(200).send({ response: name, lastname})
+    // })
+
+    // .put('/atualizar/:id', (req: Request, res: Response) => {
+    //     const { id } = req.params
+    //     const { name, lastname } = req.body
+    //     res.status(200).send({ response: `Atualizando o usuário ${id} -> ${name} ${lastname}`})
+    // })
+
+
+    //DESAFIO
+
+    .post('/registrar', (req: Request, res: Response) => { // registra o usuário
+        const{ id, name, lastname } = req.body
+        people.push({id, name, lastname})
         res.status(200).send({message: `Usuário ${name} ${lastname} cadastrado com sucesso!`})
     })
-    .get('/usuarios', (req: Request, res: Response) => {
-        res.status(200).send({ users: people })
-    })
 
-    .get('/usuarios/:id', (req: Request, res: Response) => {
+    .get('/usuarios/:id', (req: Request, res: Response) => { // procura usuário pelo id
         const { id } = req.params
         let convertedId = Number(id)
         res.status(200).send({ response: people[convertedId] })
     })
 
-    .get('/filtro', (req: Request, res: Response) => {
+    .get('/filtro', (req: Request, res: Response) => { // procura por nome e sobrenome
         const {name, lastname} = req.query
-        res.status(200).send({ response: name, lastname})
+        res.status(200).send({ response: id, name, lastname})
     })
 
-    .put('/atualizar/:id', (req: Request, res: Response) => {
-        const { id } = req.params
-        const { name, lastname } = req.body
-        res.status(200).send({ response: `Atualizando o usuário ${id} -> ${name} ${lastname}`})
+    .get('/usuarios', (req: Request, res: Response) => { // mostra todos os usuários
+        res.status(200).send({ users: people })
     })
-//....
 
 export default router;
