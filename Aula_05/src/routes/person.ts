@@ -1,11 +1,14 @@
 import express, { Request, response, Response, Router } from 'express';
-import Person from '../models/Person.ts'
+import Person from '../models/Person.ts';
 import PersonController from '../controllers/personController.ts';
+import { validateRegister } from '../middlewares/personMiddlewares.ts';
 const router: Router = express.Router();
 
 router
-    .post('/cadastro', PersonController.postUsers)
+    .post('/cadastro', validateRegister, PersonController.postUsers)
     .get('/usuarios', PersonController.getUsers)
+    .put('/update/:id', PersonController.putUsers)
+    .delete('/delete/:id', PersonController.deleteUsers)
 
     // .post('/add', async(req: Request, res: Response) => {
     //     const {name, lastname,age } = req.body
