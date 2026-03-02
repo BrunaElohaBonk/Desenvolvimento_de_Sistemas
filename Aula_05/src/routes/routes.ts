@@ -1,11 +1,11 @@
 import { Express } from 'express';
 import express from 'express'
-import usuario from './usuario'
+import person from './person'
 
 
 export default function (app: Express) {
 app
 .use(express.json())
-.use('/api/usuario', usuario)
+.use('/api/usuario', person)
 
 }
