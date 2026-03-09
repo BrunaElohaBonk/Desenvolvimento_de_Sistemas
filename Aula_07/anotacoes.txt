@@ -1,0 +1,16 @@
+No terminal:
+    npm create vite@latest
+    npm i axios
+    npm i react-router-dom
+
+Na pasta frontend:
+    No arquivo App.tsx do frontend:
+        import axios from 'axios'
+
+Na pasta backend:
+    No terminal: npm i cors
+    No arquivo server incluir: 
+        import cors from 'cors'
+        app.use(cors({
+            origin: '*'
+        }))

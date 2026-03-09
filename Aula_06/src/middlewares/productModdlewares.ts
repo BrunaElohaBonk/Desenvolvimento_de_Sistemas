@@ -1,9 +1,9 @@
 import { Request, Response, NextFunction, response } from "express";
-import Person from "../models/Person.ts";
+import Person from "../models/Product.ts";
 
 export const validateRegister = (req: Request, res: Response, next: NextFunction) => {
-    const { name, lastname } = req.body
-    if(!name || !lastname){
+    const { name, description, price, stock, category, createdAt } = req.body
+    if(!name || !description || !price || !stock || !category || !createdAt){
         return res.status(400).send({response: `Existem dados vazios.`})
     }
 
