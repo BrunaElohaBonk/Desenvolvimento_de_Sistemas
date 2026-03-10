@@ -1,7 +1,7 @@
 import express, { response } from 'express'
 import { connect } from 'node:http2'
 import routes from './routes/routes.ts'
-import connectDB from './database/database.ts'
+import connectDB from '../database/database.ts'
 import cors from 'cors'
 
 const port = 8080

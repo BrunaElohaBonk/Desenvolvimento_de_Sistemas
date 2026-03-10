@@ -16,8 +16,8 @@ class ProductController {
 
     static async putProducts(req: Request, res: Response) {
         const {id} = req.params
-        const {name, description, price, stock, category, createdAt} = req.body
-        await Product.findByIdAndUpdate(id, {name, description, price, stock, category, createdAt})
+        const {name, description, price, stock, category} = req.body
+        await Product.findByIdAndUpdate(id, {name, description, price, stock, category})
         return res.status(200).send({ response: `Produto ${name} atualizado!`})
     }
 
