@@ -1,31 +1,18 @@
-import { useEffect, useState } from 'react'
 import './App.css'
-import axios from 'axios'
+import './List'
+import { Route, Router, RouterProvider, Routes, createBrowserRouter } from 'react-router-dom'
+import List from './List'
+import Home from './Home'
+
 
 function App() {
 
-  const [produts, setProducts] = useState([])
-
-  const fetchProducts = async () => {
-    const response = await axios.get('http://localhost:8080/api/product/products')
-    setProducts(response.data.response)
-  }
-
-  useEffect(() => {
-    fetchProducts();
-  },[])
-
   return (
     <>
-    {
-      produts.map((produt) => {
-        return(
-        <div key={produt._id}>
-          <span>{produt.name}</span><br></br>
-          <span>{produt.price}</span>
-        </div>
-      )})
-    }
+    <Routes>
+      <Route path='/' element={<Home />} />
+      <Route path='/List' element={<List />} />
+    </Routes>
     </>
   )
 }
