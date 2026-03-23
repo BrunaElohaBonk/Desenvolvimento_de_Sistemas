@@ -26,8 +26,8 @@ function CadastroUser() {
             </div>
 
             <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '30px'}}>
-              <button style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Cadastrar usuário</button>
               <button onClick={handleNavigateHome} style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Voltar</button>
+              <button style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Cadastrar usuário</button>
             </div>
         </div>
         <br></br>
