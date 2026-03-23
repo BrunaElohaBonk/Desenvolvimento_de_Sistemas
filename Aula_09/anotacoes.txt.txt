@@ -1,0 +1,1 @@
+npm i dotenv crypto-js jsonwebtoken
