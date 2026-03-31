@@ -1,17 +1,18 @@
-import './App.css'
+import '../App'
 import { useNavigate } from "react-router-dom"
+import Register from './Register'
+import Login from './Login'
 
-
-function CadastroUser() {
+function Home() {
 
   const navigate = useNavigate() 
 
   const handleNavigateCadastro = () => {
-    navigate('/register')
+    navigate('/products')
   }
 
-  const handleNavigateLogin = () => {
-    navigate('/login')
+  const handleNavigateList = () => {
+    navigate('/list')
   }
 
   return (
@@ -22,8 +23,8 @@ function CadastroUser() {
             <h1 style={{color: 'black', textAlign: 'center', fontSize: '20px', marginTop: '60px'}}>O que deseja?</h1><br></br>
 
             <div style={{justifyContent: 'space-around', display: 'flex', marginTop: '20px'}}>
-                <button onClick={handleNavigateLogin} style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Fazer login</button>
-                <button onClick={handleNavigateCadastro} style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Cadastrar usuário</button>
+                <button onClick={handleNavigateCadastro} style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Cadastrar produto</button>
+                <button onClick={handleNavigateList} style={{height: '50px', width: '100px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Listar produtos</button>
             </div>
         </div>
     </div>
@@ -31,4 +32,4 @@ function CadastroUser() {
   )
 }
 
-export default CadastroUser
+export default Home

@@ -28,6 +28,7 @@ static async register(req: Request, res: Response): Promise<any> {
 
 static async login(req: Request, res: Response): Promise<any> {
     const {email, password} = req.body
+    console.log(email, password)
 
     const user = await User.findOne({email: email})
 
@@ -55,6 +56,25 @@ static async login(req: Request, res: Response): Promise<any> {
     }
     else {
         return res.status(404).send({response: "Usuário não encontrado"})
+    }
+}
+
+static async product(req: Request, res: Response): Promise<any> {
+    const { name, description, price, stock, category } = req.body;
+
+    const product = new User({
+        name,
+        description,
+        price,
+        stock,
+        category
+    });
+
+    try {
+        await product.save();
+        return res.status(201).send({ message: "Produto cadastrado com sucesso" });
+    } catch (error) {
+        return res.status(500).send({ message: "Algo falhou" });
     }
 }
 }

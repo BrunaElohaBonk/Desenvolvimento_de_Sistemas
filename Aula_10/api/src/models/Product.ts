@@ -1,6 +1,6 @@
 import mongoose, { Schema, Document } from 'mongoose';
 
-interface IPerson extends Document {
+interface IProduct extends Document {
 name: string;
 description: string;
 price: number;
@@ -18,6 +18,6 @@ category: { type: String, required: false },
 createdAt: { type: Date, default: Date.now },
 });
 
-const Person = mongoose.model<IPerson>('Person', personSchema, 'usuario');
+const Product = mongoose.model<IProduct>('Product', personSchema, 'produto');
 
-export default Person;
+export default Product;
