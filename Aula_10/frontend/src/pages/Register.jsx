@@ -13,8 +13,8 @@ function Register() {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const handleNavigateHome = () => {
-    navigate('/home')
+  const handleNavigateLogin = () => {
+    navigate('/')
   }
 
   const handleRegister = async () => {
@@ -57,7 +57,7 @@ function Register() {
               <button onClick={handleRegister} style={{height: '40px', width: '350px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Cadastrar</button>
             </div>
             <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '10px'}}>
-              <button onClick={handleNavigateHome} style={{height: '40px', width: '350px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Voltar</button>
+              <button onClick={handleNavigateLogin} style={{height: '40px', width: '350px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Voltar</button>
             </div>
         </div>
         <br></br>

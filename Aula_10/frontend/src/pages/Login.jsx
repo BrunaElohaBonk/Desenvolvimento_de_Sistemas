@@ -30,7 +30,7 @@ function Login() {
         icon: "success"
       });
 
-      return navigate('/home')
+      return navigate('/list')
     }
     catch(e){
       console.log(e)

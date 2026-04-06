@@ -5,7 +5,7 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import { useState } from 'react'
 
-function CadastroProduto() {
+function UpdateProduto() {
 
   const navigate = useNavigate() 
 
@@ -19,9 +19,9 @@ function CadastroProduto() {
     navigate('/')
   }
 
-  const handleRegisterProduct = async () => {
+  const update = async () => {
     try{
-      await axios.post('http://localhost:8080/api/auth/product/cadastro', { name, description, price, stock, category })
+      await axios.post('http://localhost:8080/api/auth/product/update', { name, description, price, stock, category })
       setName("")
       setDescription("")
       setPrice("")
@@ -47,7 +47,7 @@ function CadastroProduto() {
     <>
     <div style={{height: '100vh', width: '100vw', backgroundColor: 'Lavender', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
         <div style={{backgroundColor: 'white', height: '550px', width: '350px', borderRadius: '15px', padding: '20px'}}>
-            <h1 style={{color: 'DarkMagenta', textAlign: 'center', marginTop: '30px'}}>Cadastro de Produtos</h1><br></br>
+            <h1 style={{color: 'DarkMagenta', textAlign: 'center', marginTop: '30px'}}>Modificar Produto</h1><br></br>
             <div style={{marginTop: '20px'}}>
                 <span style={{fontWeight: 'bold'}}>Nome: </span><br></br>
                 <input value={name} onChange={(e) => setName(e.target.value)} placeholder=' Digite o nome:' style={{height: '30px', width: '350px', borderRadius: '5px', border: 0, backgroundColor: 'lavender'}}></input><br></br><br></br>
@@ -74,4 +74,4 @@ function CadastroProduto() {
   )
 }
 
-export default CadastroProduto
+export default UpdateProduto
