@@ -21,7 +21,7 @@ function UpdateProduto() {
 
   const update = async () => {
     try{
-      await axios.post('http://localhost:8080/api/auth/product/update', { name, description, price, stock, category })
+      await axios.put('http://localhost:8080/api/auth/product/update', { name, description, price, stock, category })
       setName("")
       setDescription("")
       setPrice("")
@@ -29,7 +29,7 @@ function UpdateProduto() {
       setCategory("")
       Swal.fire({
         title: "Sucesso!",
-        text: "Produto cadastrado com sucesso!",
+        text: "Produto atualizado com sucesso!",
         icon: "success"
       });
       return navigate('/list')
@@ -37,7 +37,7 @@ function UpdateProduto() {
     catch{
       Swal.fire({
         title: "Erro!",
-        text: "Não foi possível registrar o produto",
+        text: "Não foi possível alterar o produto",
         icon: "error"
       });
     }
