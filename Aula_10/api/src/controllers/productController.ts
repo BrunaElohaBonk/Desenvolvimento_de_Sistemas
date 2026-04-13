@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, response, Response } from "express";
 import Product from "../models/Product.ts";
 
 class ProductController {
@@ -19,6 +19,14 @@ class ProductController {
         const {name, description, price, stock, category} = req.body
         await Product.findByIdAndUpdate(id, {name, description, price, stock, category})
         return res.status(200).send({ response: `Produto ${name} atualizado!`})
+    }
+
+    static async getProduct(req: Request, res: Response) {
+        const {id} = req.params;
+        const exist = await Product.findById(id);
+        if(!exist) {
+            return res.status(404).send({response:"Produto não encontrado."})
+        }
     }
 
     static async deleteProducts(req: Request, res: Response) {

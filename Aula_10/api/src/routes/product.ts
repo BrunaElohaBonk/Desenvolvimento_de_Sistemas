@@ -7,6 +7,7 @@ router
     .post('/cadastro', validateRegister, ProductController.postProducts)
     .get('/products', ProductController.getProducts)
     .put('/update/:id', ProductController.putProducts)
+    .get('/product/:id', ProductController.getProduct)
     .delete('/delete/:id', ProductController.deleteProducts)
 
 export default router;

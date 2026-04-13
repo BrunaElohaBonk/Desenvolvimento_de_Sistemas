@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
+import Swal from 'sweetalert2'
 
 function List() {
 
@@ -25,12 +26,28 @@ function List() {
   }
 
   const deleteProduct = async (id) => {
-    await axios.delete(`http://localhost:8080/api/auth/product/delete/${id}`)
-    fetchProducts()
+    Swal.fire({
+      title: "Deseja realmente deletar?",
+      showConfirmButton: true,
+      showCancelButton: true,
+      confirmButtonText: "Confirmar",
+      cancelButtonText: "Cancelar"
+    }).then(async (result) => {
+      if (result.isConfirmed) {
+        try{
+          await axios.delete(`http://localhost:8080/api/auth/product/delete/${id}`)
+          Swal.fire("Deletado com sucesso!", "", "success");
+          fetchProducts()
+        }
+        catch {
+          Swal.fire("Erro!", "", "error");
+        }
+      }
+    });
   }
 
-  const updateProduct = () => {
-    navigate('/update')
+  const updateProduct = (id) => {
+    navigate(`/update/${id}`)
   }
 
   return (
@@ -75,7 +92,7 @@ function List() {
                     <td>
                       <div style={{ display: 'flex', justifyContent: 'center', gap: '10px' }}>
                         <img
-                          onClick={updateProduct}
+                          onClick={() => updateProduct(product._id)}
                           style={{ backgroundColor: 'DarkMagenta', borderRadius: '5px', height: '25px', padding: '5px', cursor: 'pointer' }}
                           src='https://img.icons8.com/ios7/512/FFFFFF/edit--v2.png'
                           alt="Editar"
