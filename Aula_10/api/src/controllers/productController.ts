@@ -27,6 +27,8 @@ class ProductController {
         if(!exist) {
             return res.status(404).send({response:"Produto não encontrado."})
         }
+
+        return res.status(200).send(exist)
     }
 
     static async deleteProducts(req: Request, res: Response) {

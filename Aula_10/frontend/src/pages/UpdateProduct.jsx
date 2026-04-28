@@ -13,25 +13,26 @@ export const UpdateProduct = () => {
   const { id } = useParams()
 
   const getProductData = async (id) => {
-    console.log("ANghdkagaJ")
     try{
     const response = await axios.get(`http://localhost:8080/api/auth/product/product/${id}`)
-    console.log(response)
+      setName(response.data.name)
+      setCategory(response.data.category)
+      setPrice(response.data.price)
+      setStock(response.data.stock)
+      setDescription(response.data.description)
     }
     catch(e){
       console.log(e)
     }
-  //   setName(response.data.response.name)
-  //   setCategory(response.data.response.category)
-  //   setPrice(response.data.response.price)
-  //   setStock(response.data.response.stock)
-  //   setDescription(response.data.response.description)
   }
 
   useEffect(() => {
-   getProductData(id)
-    // console.log(id)
+    getProductData(id)
   }, [])
+
+  const handleNavigateList = () => {
+    navigate('/list')
+  }
 
   const update = async () => {
     Swal.fire({
@@ -43,11 +44,19 @@ export const UpdateProduct = () => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          await axios.put(`http://localhost:8080/api/auth/product/update/${id}`)
+          await axios.put(`http://localhost:8080/api/auth/product/update/${id}`,
+            {
+              name: name,
+              description: description,
+              price: price,
+              stock: stock,
+              category: category
+            }
+          )
           Swal.fire("Atualizado com sucesso!", "", "success");
-          fetchProducts()
+          navigate('/list')
         }
-        catch {
+        catch(e) {
           Swal.fire("Erro!", "", "error");
         }
       }
@@ -55,78 +64,30 @@ export const UpdateProduct = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50 flex items-center justify-center p-6">
+    <div style={{height: '100vh', width: '100vw', backgroundColor: 'Lavender', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+        <div style={{backgroundColor: 'white', height: '550px', width: '350px', borderRadius: '15px', padding: '20px'}}>
+            <h1 style={{color: 'DarkMagenta', textAlign: 'center', marginTop: '20px'}}>Atualizar Produto</h1><br></br>
+            <div style={{marginTop: '30px'}}>
+                <span style={{fontWeight: 'bold'}}>Nome: </span><br></br>
+                <input value={name} onChange={(e) => setName(e.target.value)} style={{height: '30px', width: '350px', borderRadius: '5px', border: 0, backgroundColor: 'lavender'}}></input><br></br><br></br>
+                <span style={{fontWeight: 'bold'}}>Descrição: </span><br></br>
+                <input value={description} onChange={(e) => setDescription(e.target.value)} style={{height: '30px', width: '350px', borderRadius: '5px', border: 0, backgroundColor: 'lavender'}}></input><br></br><br></br>
+                <span style={{fontWeight: 'bold'}}>Categoria: </span><br></br>
+                <input value={category} onChange={(e) => setCategory(e.target.value)} style={{height: '30px', width: '350px', borderRadius: '5px', border: 0, backgroundColor: 'lavender'}}></input><br></br><br></br>
+                <span style={{fontWeight: 'bold'}}>Estoque: </span><br></br>
+                <input value={stock} onChange={(e) => setStock(e.target.value)} style={{height: '30px', width: '350px', borderRadius: '5px', border: 0, backgroundColor: 'lavender'}}></input><br></br><br></br>
+                <span style={{fontWeight: 'bold'}}>Preço: </span><br></br>
+                <input value={price} onChange={(e) => setPrice(e.target.value)} style={{height: '30px', width: '350px', borderRadius: '5px', border: 0, backgroundColor: 'lavender'}}></input><br></br><br></br>
+            </div>
 
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
-
-        <div className="mb-6 text-center">
-          <h1 className="text-2xl font-bold text-gray-800">
-            Atualizar Produto
-          </h1>
-          <p className="text-gray-500 text-sm">
-            Preencha os dados abaixo
-          </p>
+            <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '15px'}}>
+              <button onClick={update} style={{height: '40px', width: '350px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Atualizar</button>
+            </div>
+            <div style={{display: 'flex', justifyContent: 'space-around', marginTop: '10px'}}>
+              <button onClick={handleNavigateList} style={{height: '40px', width: '350px', backgroundColor: 'DarkMagenta', color: 'white', borderRadius: '10px', border: 0}}>Voltar</button>
+            </div>
         </div>
-
-        <div className="flex flex-col gap-4">
-
-          <div>
-            <label className="text-sm text-gray-600">Nome</label>
-            <input
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => setName(e.target.value)}
-              value={name}
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-600">Descrição</label>
-            <input
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => setDescription(e.target.value)}
-              value={description}
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-600">Categoria</label>
-            <input
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => setCategory(e.target.value)}
-              value={category}
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-600">Estoque</label>
-            <input
-              type="number"
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => setStock(Number(e.target.value))}
-              value={stock}
-            />
-          </div>
-
-          <div>
-            <label className="text-sm text-gray-600">Preço</label>
-            <input
-              type="number"
-              className="w-full mt-1 px-4 py-2 border rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500"
-              onChange={(e) => setPrice(Number(e.target.value))}
-              value={price}
-            />
-          </div>
-
-        </div>
-
-        <button
-          onClick={update}
-          className="w-full mt-6 bg-blue-600 text-white py-3 rounded-xl font-medium shadow-md hover:bg-blue-700 hover:scale-[1.02] transition"
-        >
-          Atualizar Produto
-        </button>
-
-      </div>
+        <br></br>
     </div>
   )
 }

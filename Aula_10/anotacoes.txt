@@ -1,0 +1,4 @@
+post: enviar dados -> body
+get: consulta, buscar dados -> params
+put: update, atualizar -> body e params
+delete: deletar -> params

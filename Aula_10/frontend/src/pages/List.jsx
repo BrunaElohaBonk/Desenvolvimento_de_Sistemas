@@ -75,6 +75,7 @@ function List() {
           <thead>
             <tr style={{ backgroundColor: 'DarkMagenta', color: 'white' }}>
               <th style={{ padding: '10px' }}>Nome</th>
+              <th>Descrição</th>
               <th>Preço</th>
               <th>Estoque</th>
               <th>Ações</th>
@@ -87,6 +88,7 @@ function List() {
                 return (
                   <tr key={product._id} style={{ textAlign: 'center', borderBottom: '1px solid #ccc' }}>
                     <td style={{ padding: '10px' }}>{product.name}</td>
+                    <td>{product.description}</td>
                     <td>R${product.price}</td>
                     <td>{product.stock}</td>
                     <td>
