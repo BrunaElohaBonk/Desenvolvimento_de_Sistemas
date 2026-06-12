@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
-import { registerChamadoDto } from "../dtos/chamadoDTO";
-import { prisma } from "../lib/prisma";
-import { registerChamado } from "../services/chamado.service";
+import { registerChamadoDto } from "../dtos/chamadoDTO.js";
+import { prisma } from "../lib/prisma.js";
+import { registerChamado } from "../services/chamado.service.js";
 
 export default class ChamadoController {
     static async create(req: Request, res: Response){

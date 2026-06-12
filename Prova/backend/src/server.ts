@@ -1,5 +1,5 @@
 import express from 'express';
-import routes from "./routes/routes"
+import routes from "./routes/routes.js"
 // import connectDB from './database/database.ts';
 import cors from 'cors'
 import 'dotenv/config'

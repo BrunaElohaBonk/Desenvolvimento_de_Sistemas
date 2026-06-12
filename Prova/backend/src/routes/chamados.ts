@@ -1,5 +1,5 @@
 import express from 'express';
-import ChamadoController from '../controllers/ChamadoController';
+import ChamadoController from '../controllers/ChamadoController.js';
 
 const route = express.Router();
 

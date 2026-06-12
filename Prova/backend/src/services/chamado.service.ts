@@ -1,5 +1,6 @@
-import { registerChamadoDto, updateChamadoDto } from "../dtos/chamadoDTO"
-import { prisma }  from '../lib/prisma'
+import { Params } from "react-router-dom"
+import { registerChamadoDto, updateChamadoDto } from "../dtos/chamadoDTO.js"
+import { prisma }  from '../lib/prisma.js'
 
 export const registerChamado = async (data: registerChamadoDto)=>{
    const { id, title, description, sector, priority, status, createdAt } = data
@@ -12,19 +13,25 @@ export const showChamados = async ()=>{
    return await prisma.chamado.findMany()
 }
 
-export const showChamadoById = async (id)=>{
-   const {id} = req.params
+export const showChamadoById = async (id: Params)=>{
    return await prisma.chamado.findMany(id)
 }
 
-export const updateChamado = async (id,data)=>{
+export const updateChamado = async (id: Params, data: updateChamadoDto)=>{
+   const { title, description, sector, priority, status, createdAt } = data
+   return await prisma.chamado.update(id)({
+      data: {id, title, description, sector, priority, status, createdAt}
+   })
 }
 
-export const deleteChamado = async (id)=>{
+export const deleteChamado = async (id: Params)=>{
+   return await prisma.chamado.delete(id)
 }
 
-export const startChamado = async (id)=>{
+export const startChamado = async (id: Params)=>{
+   return await prisma.chamado.
 }
 
-export const finishChamado = async (id)=>{
+export const finishChamado = async (id: Params)=>{
+   return await prisma.chamado.
 }

@@ -1,5 +1,5 @@
 import { NextFunction, Request, Response} from "express";
-import { prisma } from "../lib/prisma";
+import { prisma } from "../lib/prisma.js";
 
 export const validateRegister = (req: Request, res: Response, next: NextFunction) => {
     const {title, description, sector, priority, status} = req.body
