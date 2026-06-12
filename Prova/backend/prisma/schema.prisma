@@ -14,9 +14,12 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Chamado {
   id Int @default(autoincrement()) @id
-  name String
-  email String @unique
-  password String
+  title String @unique
+  description String
+  sector String
+  priority String
+  status String
+  createdAt String 
 }
