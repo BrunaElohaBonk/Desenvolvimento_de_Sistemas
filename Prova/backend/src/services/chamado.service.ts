@@ -29,9 +29,9 @@ export const deleteChamado = async (id: Params)=>{
 }
 
 export const startChamado = async (id: Params)=>{
-   return await prisma.chamado.
+   
 }
 
 export const finishChamado = async (id: Params)=>{
-   return await prisma.chamado.
+   
 }
